@@ -1,3 +1,4 @@
+rm -r ./_book
 gitbook build
 rm ./_book/build.sh
 rm ./_book/LICENSE
