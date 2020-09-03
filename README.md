@@ -40,3 +40,22 @@
   * 3.2.5、非实心方块
 * 3.4、实例注册问题详解
 * 3.5、语言文件与本地化
+
+## 捐助
+
+如果您想支持作者，您可以考虑[给我发电](https://afdian.net/@vvvbbbcz)。
+
+## 版权声明
+
+本教程作者：vvvbbbcz。
+
+斌政工作室与本教程作者共有版权。
+
+转载请附上本教程链接：  
+国内：https://vvvbbbcz.gitee.io/modderguide/  
+国外：https://vvvbbbcz.github.io/ModderGuide/
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">
+    <img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+</a>  
+本教程采用 [知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh) 进行许可。
