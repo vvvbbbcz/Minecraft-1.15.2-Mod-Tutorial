@@ -1,5 +1,6 @@
 package com.github.vvvbbbcz.modderguide;
 
+import com.github.vvvbbbcz.modderguide.item.MGItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -9,9 +10,13 @@ import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod("modderguide")
+@Mod(ModderGuide.MODID)
 public class ModderGuide {
+	public static final String MODID = "modderguide";
+
 	public ModderGuide() {
+		MGItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
