@@ -241,9 +241,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.5.1" data-path="Mod主类.html">
+        <li class="chapter active" data-level="1.5.1" data-path="3.1-Mod主类.html">
             
-                <a href="Mod主类.html">
+                <a href="3.1-Mod主类.html">
             
                     
                     3.1、Mod主类
@@ -268,14 +268,14 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.2.1" >
+        <li class="chapter " data-level="1.5.2.1" data-path="3.2-第一个物品/3.2.1-创建简单物品.html">
             
-                <span>
+                <a href="3.2-第一个物品/3.2.1-创建简单物品.html">
             
                     
-                    3.1.1、物品的实例与注册
+                    3.1.1、创建简单物品
             
-                </span>
+                </a>
             
 
             
@@ -299,7 +299,7 @@
                 <span>
             
                     
-                    3.1.3、物品注册相关问题概述
+                    3.1.3、工具、武器、护甲与食物
             
                 </span>
             
@@ -312,7 +312,20 @@
                 <span>
             
                     
-                    3.1.4、更复杂的物品
+                    3.1.4、创造模式物品栏
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.5" >
+            
+                <span>
+            
+                    
+                    3.1.5、更复杂的物品
             
                 </span>
             
@@ -344,7 +357,7 @@
                 <span>
             
                     
-                    3.2.1、基础方块注册
+                    3.2.1、创建简单方块
             
                 </span>
             
@@ -357,7 +370,7 @@
                 <span>
             
                     
-                    3.2.2、方块模型与渲染
+                    3.2.2、方块的模型与渲染
             
                 </span>
             
@@ -383,7 +396,20 @@
                 <span>
             
                     
-                    3.2.4、Block、Item与ItemStack
+                    3.2.4、多BlockState方块
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" >
+            
+                <span>
+            
+                    
+                    3.2.5、非实心方块
             
                 </span>
             
@@ -393,6 +419,32 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    3.4、实例注册问题详解
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    3.5、语言文件与本地化
+            
+                </span>
+            
+
             
         </li>
     
@@ -447,18 +499,22 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="mod&#x4E3B;&#x7C7B;">Mod&#x4E3B;&#x7C7B;</h1>
-<p>&#x9996;&#x5148;&#xFF0C;&#x6253;&#x5F00;<code>src/main/java</code>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x91CC;&#x9762;&#x6709;&#x4E00;&#x4E2A;ExampleMod&#x3002;&#x5728;&#x7F3A;&#x5C11;&#x53C2;&#x8003;&#x6587;&#x6863;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9605;&#x8BFB;ExampleMod&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5FEB;&#x901F;&#x4E86;&#x89E3;Mod&#x7684;&#x5927;&#x4F53;&#x5F00;&#x53D1;&#x65B9;&#x5F0F;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x5148;&#x5C1D;&#x8BD5;&#x9605;&#x8BFB;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6253;&#x5F00;<code>src/main/java</code>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x91CC;&#x9762;&#x5DF2;&#x7ECF;&#x6709;<code>ExampleMod.java</code>&#x4E86;&#x3002;&#x5728;&#x7F3A;&#x5C11;&#x53C2;&#x8003;&#x6587;&#x6863;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9605;&#x8BFB;<code>ExampleMod.java</code>&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5FEB;&#x901F;&#x4E86;&#x89E3;Mod&#x7684;&#x5927;&#x4F53;&#x5F00;&#x53D1;&#x65B9;&#x5F0F;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x5148;&#x5C1D;&#x8BD5;&#x9605;&#x8BFB;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x8BFB;&#x4E0D;&#x61C2;&#x4E5F;&#x6CA1;&#x5173;&#x7CFB;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5220;&#x6389;&#xFF0C;&#x6211;&#x4EEC;&#x7A0D;&#x540E;&#x4F1A;&#x8BB2;&#x5230;&#x3002;</p>
 <p>&#x9996;&#x5148;&#x5C31;&#x662F;&#x521B;&#x5EFA;&#x5305;&#x3002;<strong>&#x8BB0;&#x4F4F;&#xFF0C;&#x5305;&#x540D;&#x8981;&#x4E0E;<code>build.graldle</code>&#x91CC;&#x7684;<code>group</code>&#x5B57;&#x6BB5;&#x76F8;&#x540C;&#x3002;</strong><br>&#x672C;&#x6587;&#x4E3A;<code>com.github.vvvbbbcz.modderguide</code>&#x3002;<strong>&#x6CE8;&#x610F;&#xFF1A;Java&#x5305;&#x540D;&#x8981;&#x4F7F;&#x7528;&#x5168;&#x5C0F;&#x5199;</strong></p>
 <p>&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E3B;&#x7C7B;&#xFF0C;&#x7C7B;&#x540D;&#x4E00;&#x822C;&#x4E3A;Mod&#x540D;&#xFF0C;&#x672C;&#x6587;&#x4E3A;<code>ModderGuide.java</code>&#x3002;<strong>&#x6CE8;&#x610F;&#xFF1A;Java&#x7C7B;&#x540D;&#x8981;&#x4F7F;&#x7528;&#x5927;&#x5199;&#x9A7C;&#x5CF0;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5C06;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#x518D;&#x53BB;&#x6389;&#x7A7A;&#x683C;&#x540E;&#x7684;&#x5F62;&#x5F0F;</strong></p>
 <p>&#x5148;&#x628A;&#x6253;&#x4E86;&#x6CE8;&#x91CA;&#x7684;&#x4EE3;&#x7801;&#x8D34;&#x51FA;&#x6765;&#xFF0C;&#x81EA;&#x5DF1;&#x4F53;&#x4F1A;&#x3002;</p>
 <p><strong><code>src/main/java/com/github/vvvbbbcz/modderguide/ModderGuide.java</code></strong>&#xFF1A;</p>
 <pre><code class="lang-java"><span class="hljs-comment">// Forge&#x5728;&#x52A0;&#x8F7D;Mod&#x65F6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5BFB;&#x627E;&#x542B;&#x6709;@Mod&#x6CE8;&#x89E3;&#x7684;&#x7C7B;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;Mod&#x7684;&#x4E3B;&#x7C7B;&#xFF0C;&#x7136;&#x540E;&#x52A0;&#x8F7D;&#x4E3B;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
-<span class="hljs-meta">@Mod</span>(<span class="hljs-string">&quot;modderguide&quot;</span>) <span class="hljs-comment">// &#x91CC;&#x9762;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x662F;modid</span>
+<span class="hljs-meta">@Mod</span>(ModderGuide.MODID)
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ModderGuide</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String MODID = <span class="hljs-string">&quot;modderguide&quot;</span>; <span class="hljs-comment">// &#x5C06;modid&#x72EC;&#x7ACB;&#x51FA;&#x6765;&#xFF0C;&#x65B9;&#x4FBF;&#x4EE5;&#x540E;&#x7684;&#x5F00;&#x53D1;</span>
+
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ModderGuide</span><span class="hljs-params">()</span> </span>{ <span class="hljs-comment">// &#x4E3B;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(<span class="hljs-keyword">this</span>::setup); <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x4E8B;&#x4EF6;&#x7CFB;&#x7EDF;&#x6982;&#x8FF0;&#x7AE0;&#x8282;&#x4E2D;&#x7684;@SubscribeEvent&#x6CE8;&#x89E3;</span>
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(<span class="hljs-keyword">this</span>::enqueueIMC); <span class="hljs-comment">// getModEventBus()&#x65B9;&#x6CD5;&#x8868;&#x660E;&#x8FD9;&#x662F;&#x5411;Mod&#x603B;&#x7EBF;&#x6DFB;&#x52A0;&#x76D1;&#x542C;</span>
+        <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;1.3&#x7AE0;&#x8282;&#x4E2D;&#x7684;@SubscribeEvent&#x6CE8;&#x89E3;</span>
+        <span class="hljs-comment">// getModEventBus()&#x65B9;&#x6CD5;&#x8868;&#x660E;&#x8FD9;&#x662F;&#x5411;Mod&#x603B;&#x7EBF;&#x6DFB;&#x52A0;&#x76D1;&#x542C;</span>
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(<span class="hljs-keyword">this</span>::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(<span class="hljs-keyword">this</span>::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(<span class="hljs-keyword">this</span>::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(<span class="hljs-keyword">this</span>::doClientStuff);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(<span class="hljs-keyword">this</span>::onServerStarting);
@@ -476,7 +532,7 @@
     }
 
     <span class="hljs-comment">// &#x76D1;&#x542C;IMC&#x4E8B;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x4E3B;&#x8981;&#x7528;&#x4E8E;Mod&#x95F4;&#x53D1;&#x9001;&#x4FE1;&#x606F;</span>
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">enqueueIMC</span><span class="hljs-params">(<span class="hljs-keyword">final</span> InterModEnqueueEvent event)</span> </span>{ 
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">enqueueIMC</span><span class="hljs-params">(<span class="hljs-keyword">final</span> InterModEnqueueEvent event)</span> </span>{
     }
 
     <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">processIMC</span><span class="hljs-params">(<span class="hljs-keyword">final</span> InterModProcessEvent event)</span> </span>{
@@ -518,7 +574,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.1、Mod主类","level":"1.5.1","depth":2,"next":{"title":"3.2、第一个物品","level":"1.5.2","depth":2,"ref":"","articles":[{"title":"3.1.1、物品的实例与注册","level":"1.5.2.1","depth":3,"ref":"","articles":[]},{"title":"3.1.2、物品的模型与渲染","level":"1.5.2.2","depth":3,"ref":"","articles":[]},{"title":"3.1.3、物品注册相关问题概述","level":"1.5.2.3","depth":3,"ref":"","articles":[]},{"title":"3.1.4、更复杂的物品","level":"1.5.2.4","depth":3,"ref":"","articles":[]}]},"previous":{"title":"3、正式开始-初级部分","level":"1.5","depth":1,"ref":"","articles":[{"title":"3.1、Mod主类","level":"1.5.1","depth":2,"path":"3-正式开始-初级部分/Mod主类.md","ref":"3-正式开始-初级部分/Mod主类.md","articles":[]},{"title":"3.2、第一个物品","level":"1.5.2","depth":2,"ref":"","articles":[{"title":"3.1.1、物品的实例与注册","level":"1.5.2.1","depth":3,"ref":"","articles":[]},{"title":"3.1.2、物品的模型与渲染","level":"1.5.2.2","depth":3,"ref":"","articles":[]},{"title":"3.1.3、物品注册相关问题概述","level":"1.5.2.3","depth":3,"ref":"","articles":[]},{"title":"3.1.4、更复杂的物品","level":"1.5.2.4","depth":3,"ref":"","articles":[]}]},{"title":"3.3、第一个方块","level":"1.5.3","depth":2,"ref":"","articles":[{"title":"3.2.1、基础方块注册","level":"1.5.3.1","depth":3,"ref":"","articles":[]},{"title":"3.2.2、方块模型与渲染","level":"1.5.3.2","depth":3,"ref":"","articles":[]},{"title":"3.2.3、方块的物品状态","level":"1.5.3.3","depth":3,"ref":"","articles":[]},{"title":"3.2.4、Block、Item与ItemStack","level":"1.5.3.4","depth":3,"ref":"","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-正式开始-初级部分/Mod主类.md","mtime":"2020-09-02T09:41:48.955Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-02T09:45:41.783Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.1、Mod主类","level":"1.5.1","depth":2,"next":{"title":"3.2、第一个物品","level":"1.5.2","depth":2,"ref":"","articles":[{"title":"3.1.1、创建简单物品","level":"1.5.2.1","depth":3,"path":"3-正式开始-初级部分/3.2-第一个物品/3.2.1-创建简单物品.md","ref":"3-正式开始-初级部分/3.2-第一个物品/3.2.1-创建简单物品.md","articles":[]},{"title":"3.1.2、物品的模型与渲染","level":"1.5.2.2","depth":3,"ref":"","articles":[]},{"title":"3.1.3、工具、武器、护甲与食物","level":"1.5.2.3","depth":3,"ref":"","articles":[]},{"title":"3.1.4、创造模式物品栏","level":"1.5.2.4","depth":3,"ref":"","articles":[]},{"title":"3.1.5、更复杂的物品","level":"1.5.2.5","depth":3,"ref":"","articles":[]}]},"previous":{"title":"3、正式开始-初级部分","level":"1.5","depth":1,"ref":"","articles":[{"title":"3.1、Mod主类","level":"1.5.1","depth":2,"path":"3-正式开始-初级部分/3.1-Mod主类.md","ref":"3-正式开始-初级部分/3.1-Mod主类.md","articles":[]},{"title":"3.2、第一个物品","level":"1.5.2","depth":2,"ref":"","articles":[{"title":"3.1.1、创建简单物品","level":"1.5.2.1","depth":3,"path":"3-正式开始-初级部分/3.2-第一个物品/3.2.1-创建简单物品.md","ref":"3-正式开始-初级部分/3.2-第一个物品/3.2.1-创建简单物品.md","articles":[]},{"title":"3.1.2、物品的模型与渲染","level":"1.5.2.2","depth":3,"ref":"","articles":[]},{"title":"3.1.3、工具、武器、护甲与食物","level":"1.5.2.3","depth":3,"ref":"","articles":[]},{"title":"3.1.4、创造模式物品栏","level":"1.5.2.4","depth":3,"ref":"","articles":[]},{"title":"3.1.5、更复杂的物品","level":"1.5.2.5","depth":3,"ref":"","articles":[]}]},{"title":"3.3、第一个方块","level":"1.5.3","depth":2,"ref":"","articles":[{"title":"3.2.1、创建简单方块","level":"1.5.3.1","depth":3,"ref":"","articles":[]},{"title":"3.2.2、方块的模型与渲染","level":"1.5.3.2","depth":3,"ref":"","articles":[]},{"title":"3.2.3、方块的物品状态","level":"1.5.3.3","depth":3,"ref":"","articles":[]},{"title":"3.2.4、多BlockState方块","level":"1.5.3.4","depth":3,"ref":"","articles":[]},{"title":"3.2.5、非实心方块","level":"1.5.3.5","depth":3,"ref":"","articles":[]}]},{"title":"3.4、实例注册问题详解","level":"1.5.4","depth":2,"ref":"","articles":[]},{"title":"3.5、语言文件与本地化","level":"1.5.5","depth":2,"ref":"","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-正式开始-初级部分/3.1-Mod主类.md","mtime":"2020-09-03T09:34:55.101Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-03T10:07:18.470Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
