@@ -29,7 +29,7 @@
 * 3.2、第一个物品
   * [3.2.1、创建简单物品](3-正式开始-初级部分/3.2-第一个物品/3.2.1-创建简单物品.md)
   * [3.2.2、物品的模型与材质](3-正式开始-初级部分/3.2-第一个物品/3.2.2-物品的模型与材质.md)
-  * 3.2.3、工具、武器、护甲与食物
+  * [3.2.3、工具、武器、护甲与食物](3-正式开始-初级部分/3.2-第一个物品/3.2.3-工具、武器、护甲与食物.md)
   * 3.2.4、创造模式物品栏
   * 3.2.5、更复杂的物品
 * 3.3、第一个方块
@@ -52,11 +52,13 @@
 
 斌政工作室与本教程作者共有版权。
 
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">
+    <img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>  
+本教程采用 [知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh) 进行许可。
+
 转载请附上本教程链接：  
 国内：https://vvvbbbcz.gitee.io/modderguide/  
 国外：https://vvvbbbcz.github.io/ModderGuide/
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">
-    <img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
-</a>  
-本教程采用 [知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh) 进行许可。
+本教程还提供[源代码](https://github.com/vvvbbbcz/ModderGuide/tree/master)，使用源码请遵守[GPL-3.0](https://github.com/vvvbbbcz/ModderGuide/blob/master/LICENSE)协议的规定。  
+源码国内镜像：[链接](https://gitee.com/vvvbbbcz/ModderGuide/tree/master/)
