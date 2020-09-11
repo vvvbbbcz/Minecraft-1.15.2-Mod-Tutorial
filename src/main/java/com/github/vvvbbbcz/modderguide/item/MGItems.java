@@ -15,4 +15,5 @@ public class MGItems {
 	public static final RegistryObject<Item> EMERALD_SWORD = ITEMS.register("emerald_sword", () -> new SwordItem(MGItemTier.EMERALD, 3, -2.0F, new Item.Properties().group(MGItemGroup.MODDERGUIDE)));
 	public static final RegistryObject<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet", () -> new ArmorItem(MGArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().group(MGItemGroup.MODDERGUIDE)));
 	public static final RegistryObject<Item> FISH_SOUP = ITEMS.register("fish_soup", () -> new Item(new Item.Properties().group(MGItemGroup.MODDERGUIDE).food(MGFoods.FISH_SOUP)));
+	public static final RegistryObject<Item> SPEED_GEM = ITEMS.register("speed_gem", SpeedGemItem::new);
 }
