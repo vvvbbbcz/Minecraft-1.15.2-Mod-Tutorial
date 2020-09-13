@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>3.3.1、创建简单方块 · GitBook</title>
+        <title>3.3.2、方块的模型与材质 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="3.3.2-方块的模型与材质.html" />
     
+    <link rel="prev" href="3.3.1-创建简单方块.html" />
     
 
     </head>
@@ -380,7 +380,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.7.3.1" data-path="3.3.1-创建简单方块.html">
+        <li class="chapter " data-level="1.7.3.1" data-path="3.3.1-创建简单方块.html">
             
                 <a href="3.3.1-创建简单方块.html">
             
@@ -393,7 +393,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3.2" data-path="3.3.2-方块的模型与材质.html">
+        <li class="chapter active" data-level="1.7.3.2" data-path="3.3.2-方块的模型与材质.html">
             
                 <a href="3.3.2-方块的模型与材质.html">
             
@@ -511,7 +511,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >3.3.1、创建简单方块</a>
+        <a href="../.." >3.3.2、方块的模型与材质</a>
     </h1>
 </div>
 
@@ -526,38 +526,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x521B;&#x5EFA;&#x7B80;&#x5355;&#x65B9;&#x5757;">&#x521B;&#x5EFA;&#x7B80;&#x5355;&#x65B9;&#x5757;</h1>
-<p>&#x521B;&#x5EFA;&#x65B9;&#x5757;&#xFF0C;&#x5176;&#x5B9E;&#x548C;&#x7269;&#x54C1;&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x8FD8;&#x662F;&#x6709;&#x4E00;&#x4E9B;&#x4E0D;&#x540C;&#x3002;</p>
-<h2 id="&#x65B9;&#x5757;&#x4E0E;&#x7269;&#x54C1;&#x7684;&#x5173;&#x7CFB;">&#x65B9;&#x5757;&#x4E0E;&#x7269;&#x54C1;&#x7684;&#x5173;&#x7CFB;</h2>
-<p>&#x6211;&#x4EEC;&#x5E73;&#x65F6;&#x5728;&#x7269;&#x54C1;&#x680F;&#x4E2D;&#x7684;&#x65B9;&#x5757;&#xFF0C;&#x5176;&#x5B9E;&#x90FD;&#x662F;&#x7269;&#x54C1;&#xFF0C;<strong>&#x53EA;&#x6709;&#x653E;&#x5728;&#x4E16;&#x754C;&#x4E2D;&#x7684;&#x65B9;&#x5757;&#x624D;&#x662F;&#x771F;&#x6B63;&#x7684;&#x65B9;&#x5757;</strong>&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x65B9;&#x5757;&#x65F6;&#xFF0C;<strong>&#x4E0D;&#x4EC5;&#x8981;&#x6CE8;&#x518C;&#x8FD9;&#x4E2A;&#x65B9;&#x5757;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x6CE8;&#x518C;&#x8FD9;&#x4E2A;&#x65B9;&#x5757;&#x7684;&#x7269;&#x54C1;&#x5F62;&#x6001;</strong>&#x3002;</p>
-<p>&#x4F8B;&#x5982;Minecraft&#x4E2D;&#x7684;&#x672B;&#x5730;&#x4F20;&#x9001;&#x95E8;&#xFF0C;&#x5B83;&#x53EA;&#x80FD;&#x653E;&#x5728;&#x4E16;&#x754C;&#x4E2D;&#xFF0C;&#x5374;&#x4E0D;&#x80FD;&#x62FF;&#x5728;&#x624B;&#x4E0A;&#xFF0C;&#x5C31;&#x662F;&#x56E0;&#x4E3A;<strong>&#x672B;&#x5730;&#x4F20;&#x9001;&#x95E8;&#x53EA;&#x6CE8;&#x518C;&#x4E86;&#x65B9;&#x5757;&#xFF0C;&#x800C;&#x6CA1;&#x6709;&#x6CE8;&#x518C;&#x5B83;&#x7684;&#x7269;&#x54C1;&#x5F62;&#x6001;</strong>&#x3002;</p>
-<h2 id="&#x5F00;&#x59CB;&#x521B;&#x5EFA;&#x65B9;&#x5757;">&#x5F00;&#x59CB;&#x521B;&#x5EFA;&#x65B9;&#x5757;</h2>
-<p>&#x548C;&#x7269;&#x54C1;&#x4E00;&#x6837;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<p><strong><code>src/main/java/com/github/vvvbbbcz/modderguide/block/MGBlocks.java&#xFF08;&#x90E8;&#x5206;&#xFF09;</code></strong>&#xFF1A;</p>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> DeferredRegister&lt;Block&gt; BLOCKS = <span class="hljs-keyword">new</span> DeferredRegister&lt;&gt;(ForgeRegistries.BLOCKS, ModderGuide.MODID);
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> RegistryObject&lt;Block&gt; TEST_BLOCK = BLOCKS.register(<span class="hljs-string">&quot;test_block&quot;</span>, () -&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Block(Block.Properties.create(...));
-});
+                                <h1 id="&#x65B9;&#x5757;&#x7684;&#x6A21;&#x578B;&#x4E0E;&#x6750;&#x8D28;">&#x65B9;&#x5757;&#x7684;&#x6A21;&#x578B;&#x4E0E;&#x6750;&#x8D28;</h1>
+<p>&#x548C;&#x7269;&#x54C1;&#x4E00;&#x6837;&#xFF0C;&#x65B9;&#x5757;&#x4E5F;&#x9700;&#x8981;&#x6A21;&#x578B;&#x3002;&#x4F46;&#x533A;&#x522B;&#x662F;&#xFF0C;<strong>&#x65B9;&#x5757;&#x591A;&#x4E86;<code>BlockState</code>&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x6709;&#x4E9B;&#x4E0D;&#x540C;&#x4E86;</strong>&#x3002;</p>
+<h2 id="blockstate">BlockState</h2>
+<p>&#x5728;<code>assets/&lt;modid&gt;/</code>&#x4E0B;&#x65B0;&#x5EFA;&#x76EE;&#x5F55;<code>blockstates</code>&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4EE5;&#x539F;&#x7248;&#x5706;&#x77F3;&#x7684;&#x4EE3;&#x7801;&#x4E3A;&#x4F8B;&#xFF0C;<strong>&#x8BF7;&#x8BFB;&#x8005;&#x6839;&#x636E;&#x6CE8;&#x91CA;&#x81EA;&#x884C;&#x7F16;&#x5199;</strong>&#x3002;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;variants&quot;</span>: {
+        <span class="hljs-string">&quot;&quot;</span>: { <span class="hljs-string">&quot;model&quot;</span>: <span class="hljs-string">&quot;block/cobblestone&quot;</span> } <span class="hljs-comment">// &#x8868;&#x793A;&#x6A21;&#x578B;&#x4E3A;assets/&lt;modid&gt;/models/block/cobblestone.json</span>
+    }
+}
 </code></pre>
-<p>&#x8FD9;&#x91CC;&#x7684;<code>Properties</code>&#x4E0E;&#x7269;&#x54C1;&#x7684;&#x6709;&#x533A;&#x522B;&#xFF0C;<strong>&#x9700;&#x8981;&#x4F7F;&#x7528;<code>create()</code>&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x521B;&#x5EFA;</strong>&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x4F20;&#x5165;&#x4E00;&#x4E2A;<code>Material</code>&#x3002;</p>
-<p><code>Material</code>&#xFF0C;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x5C31;&#x662F;&#x65B9;&#x5757;&#x7684;&#x6750;&#x8D28;&#x3002;Minecraft&#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7;Material&#x6765;&#x5224;&#x5B9A;&#x65B9;&#x5757;&#x7684;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x8BFB;&#x8005;&#x4F20;&#x5165;<code>Material.WOOD</code>&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x65B9;&#x5757;&#x5C06;&#x5177;&#x6709;&#x7C7B;&#x4F3C;&#x4E8E;&#x6728;&#x5934;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5305;&#x62EC;&#x4F46;&#x4E0D;&#x9650;&#x4E8E;&#x53EF;&#x71C3;&#x70E7;&#x3001;&#x53EF;&#x4F7F;&#x7528;&#x65A7;&#x5934;&#x7834;&#x574F;&#x7B49;&#x3002;&#x5728;&#x672C;&#x6587;&#x5219;&#x4EE5;<code>Material.ROCK</code>&#xFF08;&#x5CA9;&#x77F3;&#xFF09;&#x4E3A;&#x4F8B;&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-keyword">new</span> Block(Block.Properties.create(Material.WOOD));
+<h2 id="&#x6A21;&#x578B;&#x4E0E;&#x6750;&#x8D28;">&#x6A21;&#x578B;&#x4E0E;&#x6750;&#x8D28;</h2>
+<p>&#x65B9;&#x5757;&#x6A21;&#x578B;&#x7684;&#x4EE3;&#x7801;&#x4E0E;&#x7269;&#x54C1;&#x7C7B;&#x4F3C;&#xFF0C;&#x53C2;&#x8003;Minecraft&#x539F;&#x7248;&#x5373;&#x53EF;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x641E;&#x4E0D;&#x61C2;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;&#x6559;&#x7A0B;<a href="https://github.com/vvvbbbcz/ModderGuide/tree/master" target="_blank">&#x6E90;&#x4EE3;&#x7801;</a>&#x3002;</p>
+<p><strong>&#x81F3;&#x4E8E;&#x6750;&#x8D28;&#xFF0C;&#x4E5F;&#x662F;&#x548C;&#x7269;&#x54C1;&#x4E00;&#x6837;&#x3002;</strong></p>
+<h2 id="&#x7269;&#x54C1;&#x5F62;&#x6001;&#x7684;&#x6A21;&#x578B;&#x4E0E;&#x6750;&#x8D28;">&#x7269;&#x54C1;&#x5F62;&#x6001;&#x7684;&#x6A21;&#x578B;&#x4E0E;&#x6750;&#x8D28;</h2>
+<p>&#x8BFB;&#x8005;&#x6253;&#x5F00;&#x6E38;&#x620F;&#xFF0C;&#x5E94;&#x8BE5;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x65B9;&#x5757;&#x7684;&#x6750;&#x8D28;&#x6B63;&#x5E38;&#x663E;&#x793A;&#x4E86;&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x65B9;&#x5757;&#x7684;&#x7269;&#x54C1;&#x5F62;&#x6001;&#x5E76;&#x6CA1;&#x6709;&#x6750;&#x8D28;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E3A;&#x7269;&#x54C1;&#x5F62;&#x6001;&#x6DFB;&#x52A0;&#x6A21;&#x578B;&#x4E0E;&#x6750;&#x8D28;&#x3002;</p>
+<p><strong><code>src/main/resources/assets/modderguide/models/item/test_block.json</code></strong>&#xFF1A;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;parent&quot;</span>: <span class="hljs-string">&quot;modderguide:block/test_block&quot;</span>
+}
 </code></pre>
-<p><strong>&#x522B;&#x5FD8;&#x4E86;<code>Properties</code>&#x7684;&#x5176;&#x5B83;&#x65B9;&#x6CD5;</strong>&#xFF0C;&#x4F8B;&#x5982;<code>sound()</code>&#x3001;<code>hardnessAndResistance()</code>&#x7B49;&#x65B9;&#x6CD5;&#x3002;&#x81F3;&#x4E8E;&#x610F;&#x601D;&#xFF0C;&#x8BFB;&#x8005;&#x5E94;&#x8BE5;&#x61C2;&#x3002;</p>
-<p><strong>&#x6700;&#x540E;&#xFF0C;&#x522B;&#x5FD8;&#x4E86;&#x5728;&#x4E3B;&#x7C7B;&#x6DFB;&#x52A0;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x3002;</strong></p>
-<p>&#x6253;&#x5F00;&#x6E38;&#x620F;&#xFF0C;&#x8BFB;&#x8005;&#x5E94;&#x8BE5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>/setblock</code>&#x6307;&#x4EE4;&#x653E;&#x7F6E;&#x65B9;&#x5757;&#x4E86;&#x3002;</p>
-<h2 id="&#x65B9;&#x5757;&#x7684;&#x7269;&#x54C1;&#x5F62;&#x6001;">&#x65B9;&#x5757;&#x7684;&#x7269;&#x54C1;&#x5F62;&#x6001;</h2>
-<p>&#x4F46;&#x8BFB;&#x8005;&#x5E94;&#x8BE5;&#x53D1;&#x73B0;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x65B9;&#x5757;&#x6CA1;&#x529E;&#x6CD5;&#x62FF;&#x5728;&#x624B;&#x4E0A;&#x3002;<strong>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x8981;&#x6CE8;&#x518C;&#x8BE5;&#x65B9;&#x5757;&#x7684;&#x7269;&#x54C1;&#x5F62;&#x6001;</strong>&#x3002;</p>
-<p>Minecraft&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x53EB;<code>BlockItem</code>&#x7684;&#x7C7B;&#xFF0C;&#x8FD9;&#x4E2A;&#x7C7B;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;<code>Item</code>&#xFF0C;&#x4F46;&#x5374;&#x662F;&#x6C9F;&#x901A;&#x65B9;&#x5757;&#x4E0E;&#x7269;&#x54C1;&#x7684;&#x6865;&#x6881;&#xFF0C;&#x5728;<code>MGItems</code>&#x91CC;&#x6CE8;&#x518C;&#x5373;&#x53EF;&#x3002;</p>
-<p><strong><code>src/main/java/com/github/vvvbbbcz/modderguide/item/MGItems&#xFF08;&#x90E8;&#x5206;&#xFF09;</code></strong>&#xFF1A;</p>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> RegistryObject&lt;Item&gt; TEST_BLOCK = ITEMS.register(<span class="hljs-string">&quot;test_block&quot;</span>, () -&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> BlockItem(MGBlocks.TEST_BLOCK.get(), <span class="hljs-keyword">new</span> Item.Properties().group(MGItemGroup.MODDERGUIDE));
-});
-</code></pre>
-<h2 id="&#x65B9;&#x5757;&#x7684;&#x6218;&#x5229;&#x54C1;&#x8868;&#xFF08;loot-table&#xFF09;">&#x65B9;&#x5757;&#x7684;&#x6218;&#x5229;&#x54C1;&#x8868;&#xFF08;loot table&#xFF09;</h2>
-<p>&#x4F46;&#x8BFB;&#x8005;&#x5E94;&#x8BE5;&#x53D1;&#x73B0;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x5728;&#x751F;&#x5B58;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;&#x6316;&#x6389;&#x8BE5;&#x65B9;&#x5757;&#x5374;&#x4E0D;&#x4F1A;&#x6389;&#x843D;&#x7269;&#x54C1;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x65B9;&#x5757;&#x8FD8;&#x6CA1;&#x6709;&#x6218;&#x5229;&#x54C1;&#x8868;&#x3002;</p>
-<p>Minecraft&#x7684;<strong>&#x65B9;&#x5757;&#x7684;&#x6218;&#x5229;&#x54C1;&#x8868;</strong>&#x5B58;&#x653E;&#x5728;<code>data/minecraft/loot_tables/blocks</code>&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x4E5F;&#x4EFF;&#x7167;Minecraft&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x5728;<code>src/main/resources</code>&#x65B0;&#x5EFA;&#x76EE;&#x5F55;<code>data/&lt;modid&gt;/loot_tables/blocks</code>&#xFF0C;&#x7136;&#x540E;<strong>&#x53C2;&#x8003;Minecraft&#x539F;&#x7248;&#x7684;&#x5199;&#x6CD5;</strong>&#x5373;&#x53EF;&#x3002;</p>
-<p>&#x73B0;&#x5728;&#x6253;&#x5F00;&#x6E38;&#x620F;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x65B9;&#x5757;&#x5E94;&#x8BE5;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x521B;&#x5EFA;&#x4E86;&#xFF5E;</p>
+<p>&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6709;&#x65B9;&#x5757;&#x7684;&#x6A21;&#x578B;&#x4E86;&#xFF0C;<strong>&#x76F4;&#x63A5;&#x7EE7;&#x627F;&#x65B9;&#x5757;&#x7684;&#x6A21;&#x578B;&#x5373;&#x53EF;&#xFF0C;&#x8FDE;&#x6750;&#x8D28;&#x90FD;&#x4E0D;&#x7528;&#x53E6;&#x5916;&#x5F04;</strong>&#x3002;</p>
+<p>&#x6253;&#x5F00;&#x6E38;&#x620F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6211;&#x4EEC;&#x65B9;&#x5757;&#x7684;&#x6750;&#x8D28;&#x5DF2;&#x7ECF;&#x5B8C;&#x5168;&#x6B63;&#x5E38;&#x4E86;&#x3002;</p>
 
                                 
                                 </section>
@@ -585,10 +576,10 @@
 
             
                 
-                
-                <a href="3.3.2-方块的模型与材质.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 3.3.2、方块的模型与材质">
-                    <i class="fa fa-angle-right"></i>
+                <a href="3.3.1-创建简单方块.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 3.3.1、创建简单方块">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -597,7 +588,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.3.1、创建简单方块","level":"1.7.3.1","depth":3,"next":{"title":"3.3.2、方块的模型与材质","level":"1.7.3.2","depth":3,"path":"3-正式开始-初级部分/3.3-方块/3.3.2-方块的模型与材质.md","ref":"3-正式开始-初级部分/3.3-方块/3.3.2-方块的模型与材质.md","articles":[]},"previous":{"title":"3.3、方块","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"3.3.1、创建简单方块","level":"1.7.3.1","depth":3,"path":"3-正式开始-初级部分/3.3-方块/3.3.1-创建简单方块.md","ref":"3-正式开始-初级部分/3.3-方块/3.3.1-创建简单方块.md","articles":[]},{"title":"3.3.2、方块的模型与材质","level":"1.7.3.2","depth":3,"path":"3-正式开始-初级部分/3.3-方块/3.3.2-方块的模型与材质.md","ref":"3-正式开始-初级部分/3.3-方块/3.3.2-方块的模型与材质.md","articles":[]},{"title":"3.3.3、多BlockState方块","level":"1.7.3.3","depth":3,"ref":"","articles":[]},{"title":"3.3.4、非实心方块","level":"1.7.3.4","depth":3,"ref":"","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-正式开始-初级部分/3.3-方块/3.3.1-创建简单方块.md","mtime":"2020-09-13T07:26:41.688Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-13T12:40:00.438Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.3.2、方块的模型与材质","level":"1.7.3.2","depth":3,"next":{"title":"3.3.3、多BlockState方块","level":"1.7.3.3","depth":3,"ref":"","articles":[]},"previous":{"title":"3.3.1、创建简单方块","level":"1.7.3.1","depth":3,"path":"3-正式开始-初级部分/3.3-方块/3.3.1-创建简单方块.md","ref":"3-正式开始-初级部分/3.3-方块/3.3.1-创建简单方块.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-正式开始-初级部分/3.3-方块/3.3.2-方块的模型与材质.md","mtime":"2020-09-13T12:35:45.410Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-13T12:40:00.438Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
