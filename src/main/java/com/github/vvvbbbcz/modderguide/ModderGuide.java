@@ -1,5 +1,6 @@
 package com.github.vvvbbbcz.modderguide;
 
+import com.github.vvvbbbcz.modderguide.block.MGBlocks;
 import com.github.vvvbbbcz.modderguide.item.MGItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -16,6 +17,7 @@ public class ModderGuide {
 
 	public ModderGuide() {
 		MGItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		MGBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
