@@ -20,4 +20,5 @@ public class MGItems {
 	public static final RegistryObject<Item> SPEED_GEM = ITEMS.register("speed_gem", SpeedGemItem::new);
 
 	public static final RegistryObject<Item> TEST_BLOCK = ITEMS.register("test_block", () -> new BlockItem(MGBlocks.TEST_BLOCK.get(), new Item.Properties().group(MGItemGroup.MODDERGUIDE)));
+	public static final RegistryObject<Item> IRON_CHEST = ITEMS.register("iron_chest", () -> new BlockItem(MGBlocks.IRON_CHEST.get(), new Item.Properties().group(MGItemGroup.MODDERGUIDE)));
 }
