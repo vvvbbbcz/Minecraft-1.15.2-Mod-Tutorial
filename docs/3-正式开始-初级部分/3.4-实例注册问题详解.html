@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>3.1、Mod主类 · GitBook</title>
+        <title>3.4、实例注册问题详解 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="3.2-物品/3.2-物品.html" />
     
-    
-    <link rel="prev" href="3-正式开始-初级部分.html" />
+    <link rel="prev" href="3.3-方块/3.3.4-方块碰撞箱与半透明材质.html" />
     
 
     </head>
@@ -271,7 +269,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.7.1" data-path="3.1-Mod主类.html">
+        <li class="chapter " data-level="1.7.1" data-path="3.1-Mod主类.html">
             
                 <a href="3.1-Mod主类.html">
             
@@ -439,7 +437,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="3.4-实例注册问题详解.html">
+        <li class="chapter active" data-level="1.7.4" data-path="3.4-实例注册问题详解.html">
             
                 <a href="3.4-实例注册问题详解.html">
             
@@ -513,7 +511,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >3.1、Mod主类</a>
+        <a href=".." >3.4、实例注册问题详解</a>
     </h1>
 </div>
 
@@ -528,47 +526,42 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="mod&#x4E3B;&#x7C7B;">Mod&#x4E3B;&#x7C7B;</h1>
-<p>&#x9996;&#x5148;&#xFF0C;&#x6253;&#x5F00;<code>src/main/java</code>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x91CC;&#x9762;&#x5DF2;&#x7ECF;&#x6709;<code>ExampleMod.java</code>&#x4E86;&#x3002;&#x5728;&#x7F3A;&#x5C11;&#x53C2;&#x8003;&#x6587;&#x6863;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9605;&#x8BFB;<code>ExampleMod.java</code>&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5FEB;&#x901F;&#x4E86;&#x89E3;Mod&#x7684;&#x5927;&#x4F53;&#x5F00;&#x53D1;&#x65B9;&#x5F0F;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x5148;&#x5C1D;&#x8BD5;&#x9605;&#x8BFB;&#x3002;</p>
-<p>&#x5982;&#x679C;&#x8BFB;&#x4E0D;&#x61C2;&#x4E5F;&#x6CA1;&#x5173;&#x7CFB;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5220;&#x6389;&#xFF0C;&#x6211;&#x4EEC;&#x7A0D;&#x540E;&#x4F1A;&#x8BB2;&#x5230;&#x3002;</p>
-<p>&#x9996;&#x5148;&#x5C31;&#x662F;&#x521B;&#x5EFA;&#x5305;&#x3002;<strong>&#x8BB0;&#x4F4F;&#xFF0C;&#x5305;&#x540D;&#x8981;&#x4E0E;<code>build.graldle</code>&#x91CC;&#x7684;<code>group</code>&#x5B57;&#x6BB5;&#x76F8;&#x540C;&#x3002;</strong><br>&#x672C;&#x6587;&#x4E3A;<code>com.github.vvvbbbcz.modderguide</code>&#x3002;<strong>&#x6CE8;&#x610F;&#xFF1A;Java&#x5305;&#x540D;&#x8981;&#x4F7F;&#x7528;&#x5168;&#x5C0F;&#x5199;</strong></p>
-<p>&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E3B;&#x7C7B;&#xFF0C;&#x7C7B;&#x540D;&#x4E00;&#x822C;&#x4E3A;Mod&#x540D;&#xFF0C;&#x672C;&#x6587;&#x4E3A;<code>ModderGuide.java</code>&#x3002;<strong>&#x6CE8;&#x610F;&#xFF1A;Java&#x7C7B;&#x540D;&#x8981;&#x4F7F;&#x7528;&#x5927;&#x5199;&#x9A7C;&#x5CF0;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5C06;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#x518D;&#x53BB;&#x6389;&#x7A7A;&#x683C;&#x540E;&#x7684;&#x5F62;&#x5F0F;</strong></p>
-<p>&#x5148;&#x628A;&#x6253;&#x4E86;&#x6CE8;&#x91CA;&#x7684;&#x4EE3;&#x7801;&#x8D34;&#x51FA;&#x6765;&#xFF0C;&#x81EA;&#x5DF1;&#x4F53;&#x4F1A;&#x3002;</p>
-<p><strong><code>src/main/java/com/github/vvvbbbcz/modderguide/ModderGuide.java</code></strong>&#xFF1A;</p>
-<pre><code class="lang-java"><span class="hljs-comment">// Forge&#x5728;&#x52A0;&#x8F7D;Mod&#x65F6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5BFB;&#x627E;&#x542B;&#x6709;@Mod&#x6CE8;&#x89E3;&#x7684;&#x7C7B;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;Mod&#x7684;&#x4E3B;&#x7C7B;&#xFF0C;&#x7136;&#x540E;&#x52A0;&#x8F7D;&#x4E3B;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
-<span class="hljs-meta">@Mod</span>(ModderGuide.MODID)
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ModderGuide</span> </span>{
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String MODID = <span class="hljs-string">&quot;modderguide&quot;</span>; <span class="hljs-comment">// &#x5C06;modid&#x72EC;&#x7ACB;&#x51FA;&#x6765;&#xFF0C;&#x65B9;&#x4FBF;&#x4EE5;&#x540E;&#x7684;&#x5F00;&#x53D1;</span>
+                                <h1 id="&#x5B9E;&#x4F8B;&#x6CE8;&#x518C;&#x95EE;&#x9898;&#x8BE6;&#x89E3;">&#x5B9E;&#x4F8B;&#x6CE8;&#x518C;&#x95EE;&#x9898;&#x8BE6;&#x89E3;</h1>
+<p>&#x6211;&#x4EEC;&#x5728;<strong>3.2.1&#x7AE0;&#x8282;</strong>&#x5C31;&#x8BB2;&#x8FC7;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x6CE8;&#x518C;&#x7269;&#x54C1;/&#x65B9;&#x5757;&#x65F6;&#xFF0C;&#x7269;&#x54C1;/&#x65B9;&#x5757;&#x7684;&#x5B9E;&#x4F8B;&#x90FD;&#x662F;<code>RegistryObject</code>&#x3002;<strong>&#x8FD9;&#x5728;&#x4E0D;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x8C03;&#x7528;&#x5C31;&#x4F1A;&#x5F15;&#x53D1;&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;&#x3002;</strong></p>
+<p>&#x4F46;&#x4E0D;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x662F;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#xFF1F;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x53C8;&#x662F;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#xFF1F;</p>
+<h2 id="get&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x65F6;&#x673A;">get()&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x65F6;&#x673A;</h2>
+<p>&#x5728;&#x5B9E;&#x4F8B;&#x5B8C;&#x6210;&#x6CE8;&#x518C;&#x4E4B;&#x524D;&#xFF0C;<code>get()</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x662F;<code>null</code>&#x3002;&#x56E0;&#x6B64;&#x5728;&#x5B9E;&#x4F8B;&#x5B8C;&#x6210;&#x6CE8;&#x518C;&#x4E4B;&#x524D;&#x8C03;&#x7528;&#xFF0C;&#x4FBF;&#x662F;&#x4E0D;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x3002;&#x800C;&#x5728;&#x5B9E;&#x4F8B;&#x5B8C;&#x6210;&#x6CE8;&#x518C;&#x4E4B;&#x540E;&#xFF0C;&#x4FBF;&#x662F;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x3002;</p>
+<p>&#x4F46;&#x6211;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x5B9E;&#x4F8B;&#x4F55;&#x65F6;&#x5B8C;&#x6210;&#x6CE8;&#x518C;&#xFF0C;&#x90A3;&#x600E;&#x4E48;&#x5224;&#x65AD;&#x5462;&#xFF1F;&#x603B;&#x4E4B;&#xFF0C;<strong>&#x4E00;&#x822C;&#x5728;<code>FMLCommonSetupEvent</code>&#x4E8B;&#x4EF6;&#x4E4B;&#x524D;&#xFF0C;&#x7EDF;&#x79F0;&#x4E3A;&#x4E0D;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#xFF1B;&#x5728;&#x8BE5;&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;&#x7EDF;&#x79F0;&#x4E3A;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x3002;</strong></p>
+<h2 id="&#x7531;&#x6B64;&#x4F1A;&#x5F15;&#x53D1;&#x7684;&#x95EE;&#x9898;">&#x7531;&#x6B64;&#x4F1A;&#x5F15;&#x53D1;&#x7684;&#x95EE;&#x9898;</h2>
+<p>Minecraft&#x7684;&#x5B9E;&#x4F8B;&#x6CE8;&#x518C;&#x662F;&#x6709;&#x987A;&#x5E8F;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x5148;&#x6CE8;&#x518C;&#x65B9;&#x5757;&#xFF0C;&#x518D;&#x6CE8;&#x518C;&#x7269;&#x54C1;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x7531;&#x4E8E;<code>get()</code>&#x65B9;&#x6CD5;&#x7684;&#x8FD9;&#x79CD;&#x7279;&#x6027;&#xFF0C;&#x4F1A;&#x5F15;&#x53D1;&#x5F88;&#x591A;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x6700;&#x5178;&#x578B;&#x7684;&#x83AB;&#x8FC7;&#x4E8E;<strong>&#x5411;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x6DFB;&#x52A0;&#x751F;&#x7269;&#x751F;&#x6210;&#x5F15;&#x53D1;&#x7684;&#x7A7A;&#x6307;&#x9488;&#x95EE;&#x9898;</strong>&#x3002;</p>
+<p>&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x548C;&#x751F;&#x7269;&#x4E5F;&#x4E00;&#x6837;&#x9700;&#x8981;&#x6CE8;&#x518C;&#x3002;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x53EB;<code>addSpawn()</code>&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x91CC;&#x9762;&#x8981;&#x6C42;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E00;&#x822C;&#x5728;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#xFF0C;<strong>&#x4E5F;&#x5C31;&#x662F;&#x5728;&#x6CE8;&#x518C;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x65F6;&#x8C03;&#x7528;</strong>&#x3002;&#x4F46;&#x65E0;&#x8BBA;&#x4F60;&#x5982;&#x4F55;&#x8C03;&#x7528;&#xFF0C;&#x53EA;&#x8981;&#x4F20;&#x5165;&#x7684;&#x5B9E;&#x4F53;&#x662F;&#x4F7F;&#x7528;<code>get()</code>&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x7684;&#xFF0C;<strong>&#x90FD;&#x4F1A;&#x5F15;&#x53D1;&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;</strong>&#x3002;</p>
+<p>&#x8FD9;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x56E0;&#x4E3A;Minecraft&#x662F;<strong>&#x5148;&#x6CE8;&#x518C;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#xFF0C;&#x518D;&#x6CE8;&#x518C;&#x5B9E;&#x4F53;&#x7684;</strong>&#x3002;&#x5728;&#x6CE8;&#x518C;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x65F6;&#x5C31;&#x8C03;&#x7528;&#x4E86;<code>addSpawn()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x8FDB;&#x800C;&#x8C03;&#x7528;&#x4E86;&#x5F00;&#x53D1;&#x8005;&#x4F20;&#x5165;&#x7684;&#x5B9E;&#x4F53;&#x5B9E;&#x4F8B;&#x7684;<code>get()</code>&#x65B9;&#x6CD5;&#x3002;<strong>&#x4F46;&#x6B64;&#x65F6;&#x5B9E;&#x4F53;&#x8FD8;&#x6CA1;&#x88AB;&#x6CE8;&#x518C;&#xFF0C;&#x56E0;&#x6B64;<code>get()</code>&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x662F;<code>null</code></strong>&#x3002;</p>
+<h2 id="&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;">&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;</h2>
+<p>&#x5206;&#x6790;&#x6211;&#x4EEC;&#x521A;&#x521A;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x3002;&#x5F15;&#x53D1;&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;&#xFF0C;&#x5C31;&#x662F;&#x56E0;&#x4E3A;&#x8C03;&#x7528;&#x5B9E;&#x4F53;&#x5B9E;&#x4F8B;&#x7684;<code>get()</code>&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x662F;<code>null</code>&#x3002;&#x56E0;&#x6B64;&#xFF0C;<strong>&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x786E;&#x4FDD;<code>get()</code>&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x4E0D;&#x662F;<code>null</code>&#x5373;&#x53EF;</strong>&#x3002;</p>
+<p>&#x90A3;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#xFF1F;&#x6211;&#x4EEC;&#x5728;&#x6CE8;&#x518C;&#x7269;&#x54C1;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x8BB2;&#x8FC7;&#xFF0C;&#x6CE8;&#x518C;&#x7269;&#x54C1;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x3002;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#x786E;&#x5B9E;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#xFF0C;<strong>&#x4F46;&#x6709;&#x65F6;&#x4F1A;&#x4EA7;&#x751F;&#x83AB;&#x540D;&#x5176;&#x5999;&#x7684;&#x9519;&#x8BEF;</strong>&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x4ECE;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x5165;&#x624B;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x5B9E;&#x4F8B;&#x662F;&#x4E00;&#x4E2A;<code>RegistryObject</code>&#xFF0C;&#x53EA;&#x80FD;&#x4F7F;&#x7528;<code>get()</code>&#x65B9;&#x6CD5;&#x3002;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;<code>RegistryObject</code>&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x7528;<code>Block</code>/<code>Item</code>&#x3002;&#x4F46;<code>DeferredRegister</code>&#x7684;<code>register()</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;<code>RegistryObject</code>&#xFF0C;&#x8FD9;&#x663E;&#x7136;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x3002;</p>
+<p>&#x90A3;&#x600E;&#x4E48;&#x529E;&#x5462;&#xFF1F;&#x901A;&#x8FC7;&#x7FFB;&#x9605;Minecraft&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#xFF0C;Minecraft&#x539F;&#x7248;&#x7684;&#x65B9;&#x5757;&#x662F;&#x8FD9;&#x6837;&#x6CE8;&#x518C;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Block XXXXX = register(&lt;block_name&gt;, &lt;block&gt;);
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ModderGuide</span><span class="hljs-params">()</span> </span>{ <span class="hljs-comment">// &#x4E3B;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
-        <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;1.3&#x7AE0;&#x8282;&#x4E2D;&#x7684;@SubscribeEvent&#x6CE8;&#x89E3;</span>
-        <span class="hljs-comment">// getModEventBus()&#x65B9;&#x6CD5;&#x8868;&#x660E;&#x8FD9;&#x662F;&#x5411;Mod&#x603B;&#x7EBF;&#x6DFB;&#x52A0;&#x76D1;&#x542C;</span>
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(<span class="hljs-keyword">this</span>::setup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(<span class="hljs-keyword">this</span>::enqueueIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(<span class="hljs-keyword">this</span>::processIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(<span class="hljs-keyword">this</span>::doClientStuff);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(<span class="hljs-keyword">this</span>::onServerStarting);
-
-        MinecraftForge.EVENT_BUS.register(<span class="hljs-keyword">this</span>);
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">(<span class="hljs-keyword">final</span> FMLCommonSetupEvent event)</span> </span>{ <span class="hljs-comment">// &#x76D1;&#x542C;&#x670D;&#x52A1;&#x7AEF;&#x542F;&#x52A8;&#x4E8B;&#x4EF6;</span>
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doClientStuff</span><span class="hljs-params">(<span class="hljs-keyword">final</span> FMLClientSetupEvent event)</span> </span>{ <span class="hljs-comment">// &#x76D1;&#x542C;&#x5BA2;&#x6237;&#x7AEF;&#x542F;&#x52A8;&#x4E8B;&#x4EF6;</span>
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onServerStarting</span><span class="hljs-params">(<span class="hljs-keyword">final</span> FMLServerStartingEvent event)</span> </span>{ <span class="hljs-comment">// &#x76D1;&#x542C;&#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x4E8B;&#x4EF6;</span>
-    }
-
-    <span class="hljs-comment">// &#x76D1;&#x542C;IMC&#x4E8B;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x4E3B;&#x8981;&#x7528;&#x4E8E;Mod&#x95F4;&#x53D1;&#x9001;&#x4FE1;&#x606F;</span>
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">enqueueIMC</span><span class="hljs-params">(<span class="hljs-keyword">final</span> InterModEnqueueEvent event)</span> </span>{
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">processIMC</span><span class="hljs-params">(<span class="hljs-keyword">final</span> InterModProcessEvent event)</span> </span>{
-    }
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Block <span class="hljs-title">register</span><span class="hljs-params">(String key, Block blockIn)</span> </span>{
+    <span class="hljs-keyword">return</span> Registry.register(Registry.BLOCK, key, blockIn);
 }
 </code></pre>
+<p>&#x5F88;&#x663E;&#x7136;&#xFF0C;Minecraft&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x53EB;<code>register()</code>&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x76F4;&#x63A5;&#x4F20;&#x5165;&#x65B9;&#x5757;&#x540D;&#x4E0E;&#x65B9;&#x5757;&#x5BF9;&#x8C61;&#x5373;&#x53EF;&#x6CE8;&#x518C;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x4EFF;&#x7167;Minecraft&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<p><strong><code>src/main/java/com/github/vvvbbbcz/modderguide/block/MGBlocks.java&#xFF08;&#x90E8;&#x5206;&#xFF09;</code></strong>&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Block <span class="hljs-title">register</span><span class="hljs-params">(String name, Block block)</span> </span>{
+    BLOCKS.register(name, () -&gt; block);
+    <span class="hljs-keyword">return</span> block;
+}
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x7684;&#x65B9;&#x5757;&#x5B9E;&#x4F8B;&#x5C31;&#x53D8;&#x6210;&#x4E86;&#x8FD9;&#x6837;&#xFF1A;</p>
+<p><strong><code>src/main/java/com/github/vvvbbbcz/modderguide/block/MGBlocks.java&#xFF08;&#x90E8;&#x5206;&#xFF09;</code></strong>&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Block TEST_BLOCK = register(<span class="hljs-string">&quot;test_block&quot;</span>, <span class="hljs-keyword">new</span> Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(<span class="hljs-number">0.5F</span>).sound(SoundType.STONE)));
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Block IRON_CHEST = register(<span class="hljs-string">&quot;iron_chest&quot;</span>, <span class="hljs-keyword">new</span> IronChest());
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x7269;&#x54C1;&#xFF0C;&#x4E5F;&#x662F;&#x4E00;&#x6837;&#x7684;&#x9053;&#x7406;&#x3002;</p>
 
                                 
                                 </section>
@@ -596,14 +589,10 @@
 
             
                 
-                <a href="3-正式开始-初级部分.html" class="navigation navigation-prev " aria-label="Previous page: 3、正式开始-初级部分">
+                <a href="3.3-方块/3.3.4-方块碰撞箱与半透明材质.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 3.3.4、方块碰撞箱与半透明材质">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="3.2-物品/3.2-物品.html" class="navigation navigation-next " aria-label="Next page: 3.2、物品">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -612,7 +601,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.1、Mod主类","level":"1.7.1","depth":2,"next":{"title":"3.2、物品","level":"1.7.2","depth":2,"path":"3-正式开始-初级部分/3.2-物品/3.2-物品.md","ref":"3-正式开始-初级部分/3.2-物品/3.2-物品.md","articles":[{"title":"3.2.1、创建简单物品","level":"1.7.2.1","depth":3,"path":"3-正式开始-初级部分/3.2-物品/3.2.1-创建简单物品.md","ref":"3-正式开始-初级部分/3.2-物品/3.2.1-创建简单物品.md","articles":[]},{"title":"3.2.2、物品的模型与材质","level":"1.7.2.2","depth":3,"path":"3-正式开始-初级部分/3.2-物品/3.2.2-物品的模型与材质.md","ref":"3-正式开始-初级部分/3.2-物品/3.2.2-物品的模型与材质.md","articles":[]},{"title":"3.2.3、工具、武器、护甲与食物","level":"1.7.2.3","depth":3,"path":"3-正式开始-初级部分/3.2-物品/3.2.3-工具、武器、护甲与食物.md","ref":"3-正式开始-初级部分/3.2-物品/3.2.3-工具、武器、护甲与食物.md","articles":[]},{"title":"3.2.5、ItemStack","level":"1.7.2.4","depth":3,"path":"3-正式开始-初级部分/3.2-物品/3.2.5-ItemStack.md","ref":"3-正式开始-初级部分/3.2-物品/3.2.5-ItemStack.md","articles":[]},{"title":"3.2.6、更复杂的物品","level":"1.7.2.5","depth":3,"path":"3-正式开始-初级部分/3.2-物品/3.2.6-更复杂的物品.md","ref":"3-正式开始-初级部分/3.2-物品/3.2.6-更复杂的物品.md","articles":[]}]},"previous":{"title":"3、正式开始-初级部分","level":"1.7","depth":1,"path":"3-正式开始-初级部分/3-正式开始-初级部分.md","ref":"3-正式开始-初级部分/3-正式开始-初级部分.md","articles":[{"title":"3.1、Mod主类","level":"1.7.1","depth":2,"path":"3-正式开始-初级部分/3.1-Mod主类.md","ref":"3-正式开始-初级部分/3.1-Mod主类.md","articles":[]},{"title":"3.2、物品","level":"1.7.2","depth":2,"path":"3-正式开始-初级部分/3.2-物品/3.2-物品.md","ref":"3-正式开始-初级部分/3.2-物品/3.2-物品.md","articles":[{"title":"3.2.1、创建简单物品","level":"1.7.2.1","depth":3,"path":"3-正式开始-初级部分/3.2-物品/3.2.1-创建简单物品.md","ref":"3-正式开始-初级部分/3.2-物品/3.2.1-创建简单物品.md","articles":[]},{"title":"3.2.2、物品的模型与材质","level":"1.7.2.2","depth":3,"path":"3-正式开始-初级部分/3.2-物品/3.2.2-物品的模型与材质.md","ref":"3-正式开始-初级部分/3.2-物品/3.2.2-物品的模型与材质.md","articles":[]},{"title":"3.2.3、工具、武器、护甲与食物","level":"1.7.2.3","depth":3,"path":"3-正式开始-初级部分/3.2-物品/3.2.3-工具、武器、护甲与食物.md","ref":"3-正式开始-初级部分/3.2-物品/3.2.3-工具、武器、护甲与食物.md","articles":[]},{"title":"3.2.5、ItemStack","level":"1.7.2.4","depth":3,"path":"3-正式开始-初级部分/3.2-物品/3.2.5-ItemStack.md","ref":"3-正式开始-初级部分/3.2-物品/3.2.5-ItemStack.md","articles":[]},{"title":"3.2.6、更复杂的物品","level":"1.7.2.5","depth":3,"path":"3-正式开始-初级部分/3.2-物品/3.2.6-更复杂的物品.md","ref":"3-正式开始-初级部分/3.2-物品/3.2.6-更复杂的物品.md","articles":[]}]},{"title":"3.3、方块","level":"1.7.3","depth":2,"path":"3-正式开始-初级部分/3.3-方块/3.3-方块.md","ref":"3-正式开始-初级部分/3.3-方块/3.3-方块.md","articles":[{"title":"3.3.1、创建简单方块","level":"1.7.3.1","depth":3,"path":"3-正式开始-初级部分/3.3-方块/3.3.1-创建简单方块.md","ref":"3-正式开始-初级部分/3.3-方块/3.3.1-创建简单方块.md","articles":[]},{"title":"3.3.2、方块的模型与材质","level":"1.7.3.2","depth":3,"path":"3-正式开始-初级部分/3.3-方块/3.3.2-方块的模型与材质.md","ref":"3-正式开始-初级部分/3.3-方块/3.3.2-方块的模型与材质.md","articles":[]},{"title":"3.3.3、多BlockState方块","level":"1.7.3.3","depth":3,"path":"3-正式开始-初级部分/3.3-方块/3.3.3-多BlockState方块.md","ref":"3-正式开始-初级部分/3.3-方块/3.3.3-多BlockState方块.md","articles":[]},{"title":"3.3.4、方块碰撞箱与半透明材质","level":"1.7.3.4","depth":3,"path":"3-正式开始-初级部分/3.3-方块/3.3.4-方块碰撞箱与半透明材质.md","ref":"3-正式开始-初级部分/3.3-方块/3.3.4-方块碰撞箱与半透明材质.md","articles":[]}]},{"title":"3.4、实例注册问题详解","level":"1.7.4","depth":2,"path":"3-正式开始-初级部分/3.4-实例注册问题详解.md","ref":"3-正式开始-初级部分/3.4-实例注册问题详解.md","articles":[]},{"title":"3.5、语言文件与本地化","level":"1.7.5","depth":2,"ref":"","articles":[]},{"title":"3.6、合成表","level":"1.7.6","depth":2,"ref":"","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-正式开始-初级部分/3.1-Mod主类.md","mtime":"2020-09-03T09:34:55.101Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-01T08:24:19.633Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.4、实例注册问题详解","level":"1.7.4","depth":2,"next":{"title":"3.5、语言文件与本地化","level":"1.7.5","depth":2,"ref":"","articles":[]},"previous":{"title":"3.3.4、方块碰撞箱与半透明材质","level":"1.7.3.4","depth":3,"path":"3-正式开始-初级部分/3.3-方块/3.3.4-方块碰撞箱与半透明材质.md","ref":"3-正式开始-初级部分/3.3-方块/3.3.4-方块碰撞箱与半透明材质.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-正式开始-初级部分/3.4-实例注册问题详解.md","mtime":"2020-10-01T08:23:52.625Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-01T08:24:19.633Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
