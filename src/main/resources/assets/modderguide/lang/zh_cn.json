@@ -1,0 +1,10 @@
+{
+  "itemGroup.modderguide": "ModderGuide",
+
+  "item.modderguide.test_item": "示例物品",
+  "item.modderguide.emerald_sword": "绿宝石剑",
+  "item.modderguide.emerald_helmet": "绿宝石头盔",
+  "item.modderguide.speed_gem": "速度宝石",
+
+  "block.modderguide.test_block": "示例方块"
+}
