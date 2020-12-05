@@ -19,7 +19,7 @@
 
 我虽然决定提高Mod开发门槛，但并不想劝退过多真正想制作Mod的人。因此，你只要满足以下要求即可：
 
-* 具备Java基础**（重要）**，至少要学完**面向对象**的知识
+* 具备Java基础** (重要) ，至少要学完**面向对象**的知识
 * 对Minecraft游戏的**足够**了解，包括游戏玩法、特性等
 * 一定的**自主解决问题**的能力
 * **对Mod开发的热情**
@@ -43,9 +43,9 @@
 
 ## 版权声明
 
-本教程作者：vvvbbbcz。
+本教程作者：[vvvbbbcz](https://github.com/vvvbbbcz)。
 
-斌政工作室与本教程作者共有版权。
+[斌政工作室](https://bzstudio.xyz)与本教程作者共有版权。
 
 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">
     <img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>  
@@ -56,4 +56,5 @@
 国外：https://vvvbbbcz.github.io/ModderGuide/
 
 本教程还提供[源代码](https://github.com/vvvbbbcz/ModderGuide/tree/master)，使用源码请遵守[GPL-3.0](https://github.com/vvvbbbcz/ModderGuide/blob/master/LICENSE)协议的规定。  
-源码国内镜像：[链接](https://gitee.com/vvvbbbcz/ModderGuide/tree/master/)
+源码国内镜像：[链接](https://gitee.com/vvvbbbcz/ModderGuide/tree/master/)  
+**注：源代码维护者并非本文作者，可能与原文不匹配**
