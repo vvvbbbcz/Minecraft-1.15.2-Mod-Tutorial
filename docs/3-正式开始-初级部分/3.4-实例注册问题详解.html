@@ -446,17 +446,30 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6.7" data-path="3.7-更新Forge与Mappings.html">
+            
+                <a href="3.7-更新Forge与Mappings.html">
+            
+                    
+                    3.7、更新Forge与Mappings
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../4-中级部分/4-中级部分.html">
+        <li class="chapter " data-level="1.7" data-path="../4-逐渐深入-中级部分/4-逐渐深入-中级部分.html">
             
-                <a href="../4-中级部分/4-中级部分.html">
+                <a href="../4-逐渐深入-中级部分/4-逐渐深入-中级部分.html">
             
                     
-                    4、中级部分
+                    4、逐渐深入-中级部分
             
                 </a>
             
@@ -831,7 +844,7 @@
 <h2 id="deferredregister&#x8BE6;&#x89E3;">DeferredRegister&#x8BE6;&#x89E3;</h2>
 <h3 id="get&#x7684;&#x8C03;&#x7528;&#x65F6;&#x673A;&#x4E0E;&#x76F8;&#x5173;&#x95EE;&#x9898;">get()&#x7684;&#x8C03;&#x7528;&#x65F6;&#x673A;&#x4E0E;&#x76F8;&#x5173;&#x95EE;&#x9898;</h3>
 <p>&#x5728;&#x5B9E;&#x4F8B;&#x5B8C;&#x6210;&#x6CE8;&#x518C;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x8C03;&#x7528;<code>get()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F;<code>null</code>&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x6B64;&#x65F6;&#x8C03;&#x7528;&#x4F1A;&#x5F15;&#x53D1;&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5728;&#x5B9E;&#x4F8B;&#x5B8C;&#x6210;&#x6CE8;&#x518C;&#x4E4B;&#x524D;&#x8C03;&#x7528;&#xFF0C;&#x4FBF;&#x662F;&#x4E0D;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x3002;&#x800C;&#x5728;&#x5B9E;&#x4F8B;&#x5B8C;&#x6210;&#x6CE8;&#x518C;&#x4E4B;&#x540E;&#xFF0C;&#x4FBF;&#x662F;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x3002;</p>
-<p>&#x4F46;&#x6211;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x5B9E;&#x4F8B;&#x4F55;&#x65F6;&#x5B8C;&#x6210;&#x6CE8;&#x518C;&#xFF0C;&#x90A3;&#x600E;&#x4E48;&#x5224;&#x65AD;&#x5462;&#xFF1F;&#x603B;&#x4E4B;&#xFF0C;<strong>&#x4E00;&#x822C;&#x5728;<code>FMLCommonSetupEvent</code>&#x4E8B;&#x4EF6;&#x4E4B;&#x524D;&#xFF0C;&#x7EDF;&#x79F0;&#x4E3A;&#x4E0D;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#xFF1B;&#x5728;&#x8BE5;&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;&#x7EDF;&#x79F0;&#x4E3A;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x3002;</strong></p>
+<p>&#x4F46;&#x6211;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x5B9E;&#x4F8B;&#x4F55;&#x65F6;&#x5B8C;&#x6210;&#x6CE8;&#x518C;&#xFF0C;&#x90A3;&#x600E;&#x4E48;&#x5224;&#x65AD;&#x5462;&#xFF1F;&#x603B;&#x4E4B;&#xFF0C;<strong>&#x4E00;&#x822C;&#x5728;<code>FMLCommonSetupEvent</code>&#x4E8B;&#x4EF6;&#x4E4B;&#x524D;&#xFF0C;&#x7EDF;&#x79F0;&#x4E3A;&#x4E0D;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#xFF0C;&#x6B64;&#x65F6;&#x8C03;&#x7528;&#x6613;&#x51FA;&#x73B0;NPE&#xFF1B;&#x5728;&#x8BE5;&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;&#x7EDF;&#x79F0;&#x4E3A;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#xFF0C;&#x6B64;&#x65F6;&#x8C03;&#x7528;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;NPE&#x3002;</strong></p>
 <p><strong>&#x4F46;&#x8FD9;&#x6837;&#x4E5F;&#x5F15;&#x53D1;&#x4E86;&#x4E00;&#x4E9B;&#x95EE;&#x9898;</strong>&#x3002;&#x6211;&#x9047;&#x5230;&#x8FC7;&#x6700;&#x5178;&#x578B;&#x7684;&#x4FBF;&#x662F;&#x5411;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x6DFB;&#x52A0;&#x751F;&#x7269;&#x751F;&#x6210;&#x7684;&#x95EE;&#x9898;&#x3002;&#x56E0;&#x4E3A;Minecraft&#x7684;&#x5B9E;&#x4F8B;&#x6CE8;&#x518C;&#x662F;&#x6709;&#x987A;&#x5E8F;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;<strong>&#x5148;&#x6CE8;&#x518C;&#x65B9;&#x5757;&#xFF0C;&#x518D;&#x6CE8;&#x518C;&#x7269;&#x54C1;&#xFF0C;&#x5148;&#x6CE8;&#x518C;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#xFF0C;&#x518D;&#x6CE8;&#x518C;&#x5B9E;&#x4F53;</strong>&#x3002;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x548C;&#x5B9E;&#x4F53;&#x751F;&#x7269;&#x4E5F;&#x4E00;&#x6837;&#x9700;&#x8981;&#x6CE8;&#x518C;&#x3002;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x53EB;<code>addSpawn()</code>&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5373;&#x5411;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x6DFB;&#x52A0;&#x751F;&#x7269;&#x751F;&#x6210;&#xFF0C;&#x91CC;&#x9762;&#x8981;&#x6C42;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E00;&#x822C;&#x5728;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#xFF0C;<strong>&#x4E5F;&#x5C31;&#x662F;&#x5728;&#x6CE8;&#x518C;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x65F6;&#x4F1A;&#x88AB;&#x8C03;&#x7528;</strong>&#x3002;&#x4F46;&#x65E0;&#x8BBA;&#x4F60;&#x600E;&#x4E48;&#x641E;&#xFF0C;&#x53EA;&#x8981;&#x4F20;&#x5165;&#x7684;&#x5B9E;&#x4F53;&#x662F;&#x4F7F;&#x7528;<code>get()</code>&#x65B9;&#x6CD5;&#x5F97;&#x5230;&#x7684;&#xFF0C;<strong>&#x90FD;&#x4F1A;&#x5F15;&#x53D1;&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;</strong>&#x3002;</p>
 <p>&#x8FD9;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x56E0;&#x4E3A;Minecraft&#x662F;<strong>&#x5148;&#x6CE8;&#x518C;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#xFF0C;&#x518D;&#x6CE8;&#x518C;&#x5B9E;&#x4F53;&#x7684;</strong>&#x3002;&#x5728;&#x6CE8;&#x518C;&#x751F;&#x7269;&#x7FA4;&#x7CFB;&#x65F6;&#x5C31;&#x8C03;&#x7528;&#x4E86;<code>addSpawn()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x8FDB;&#x800C;&#x8C03;&#x7528;&#x4E86;&#x5F00;&#x53D1;&#x8005;&#x4F20;&#x5165;&#x7684;&#x5B9E;&#x4F53;&#x5B9E;&#x4F8B;&#x7684;<code>get()</code>&#x65B9;&#x6CD5;&#x3002;<strong>&#x4F46;&#x6B64;&#x65F6;&#x5B9E;&#x4F53;&#x8FD8;&#x6CA1;&#x88AB;&#x6CE8;&#x518C;&#xFF0C;&#x56E0;&#x6B64;<code>get()</code>&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x662F;<code>null</code></strong>&#xFF0C;&#x5F15;&#x53D1;&#x4E86;NPE&#x3002;</p>
 <h3 id="&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;">&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;</h3>
@@ -897,7 +910,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.4、实例注册问题详解","level":"1.6.4","depth":2,"next":{"title":"3.5、语言文件与本地化","level":"1.6.5","depth":2,"path":"3-正式开始-初级部分/3.5-语言文件与本地化.md","ref":"3-正式开始-初级部分/3.5-语言文件与本地化.md","articles":[]},"previous":{"title":"3.3.4、方块碰撞箱与半透明材质","level":"1.6.3.4","depth":3,"path":"3-正式开始-初级部分/3.3-方块/3.3.4-方块碰撞箱与半透明材质.md","ref":"3-正式开始-初级部分/3.3-方块/3.3.4-方块碰撞箱与半透明材质.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-正式开始-初级部分/3.4-实例注册问题详解.md","mtime":"2020-12-12T17:29:55.638Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-12T17:30:29.286Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.4、实例注册问题详解","level":"1.6.4","depth":2,"next":{"title":"3.5、语言文件与本地化","level":"1.6.5","depth":2,"path":"3-正式开始-初级部分/3.5-语言文件与本地化.md","ref":"3-正式开始-初级部分/3.5-语言文件与本地化.md","articles":[]},"previous":{"title":"3.3.4、方块碰撞箱与半透明材质","level":"1.6.3.4","depth":3,"path":"3-正式开始-初级部分/3.3-方块/3.3.4-方块碰撞箱与半透明材质.md","ref":"3-正式开始-初级部分/3.3-方块/3.3.4-方块碰撞箱与半透明材质.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-正式开始-初级部分/3.4-实例注册问题详解.md","mtime":"2020-12-13T08:56:07.953Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-13T09:55:36.331Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
