@@ -1,6 +1,6 @@
-package com.github.vvvbbbcz.modderguide.block;
+package xyz.bzstudio.modderguide.block;
 
-import com.github.vvvbbbcz.modderguide.ModderGuide;
+import xyz.bzstudio.modderguide.ModderGuide;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

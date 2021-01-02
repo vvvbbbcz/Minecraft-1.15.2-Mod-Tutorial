@@ -1,7 +1,8 @@
-package com.github.vvvbbbcz.modderguide.item;
+package xyz.bzstudio.modderguide.item;
 
-import com.github.vvvbbbcz.modderguide.ModderGuide;
-import com.github.vvvbbbcz.modderguide.block.MGBlocks;
+import net.minecraftforge.event.RegistryEvent;
+import xyz.bzstudio.modderguide.ModderGuide;
+import xyz.bzstudio.modderguide.block.MGBlocks;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;

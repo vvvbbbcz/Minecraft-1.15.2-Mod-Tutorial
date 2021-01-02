@@ -1,4 +1,4 @@
-package com.github.vvvbbbcz.modderguide.item;
+package xyz.bzstudio.modderguide.item;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

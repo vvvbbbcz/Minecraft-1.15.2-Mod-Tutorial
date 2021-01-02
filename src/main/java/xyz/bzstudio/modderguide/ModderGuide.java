@@ -1,7 +1,7 @@
-package com.github.vvvbbbcz.modderguide;
+package xyz.bzstudio.modderguide;
 
-import com.github.vvvbbbcz.modderguide.block.MGBlocks;
-import com.github.vvvbbbcz.modderguide.item.MGItems;
+import xyz.bzstudio.modderguide.block.MGBlocks;
+import xyz.bzstudio.modderguide.item.MGItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;

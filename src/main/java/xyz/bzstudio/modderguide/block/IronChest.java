@@ -1,4 +1,4 @@
-package com.github.vvvbbbcz.modderguide.block;
+package xyz.bzstudio.modderguide.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -6,14 +6,10 @@ import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.DirectionProperty;
-import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
-import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
-
-import javax.annotation.Nonnull;
 
 public class IronChest extends Block {
 	public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
@@ -38,6 +34,5 @@ public class IronChest extends Block {
 	@Override
 	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
 		builder.add(FACING);
-		super.fillStateContainer(builder);
 	}
 }
