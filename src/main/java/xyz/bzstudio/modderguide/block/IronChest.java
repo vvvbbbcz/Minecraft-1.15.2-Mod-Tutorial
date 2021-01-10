@@ -4,12 +4,15 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Rotation;
+import net.minecraft.util.*;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.world.World;
+import xyz.bzstudio.modderguide.client.gui.screen.ScreenManager;
 
 public class IronChest extends Block {
 	public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
@@ -17,6 +20,15 @@ public class IronChest extends Block {
 	public IronChest() {
 		super(Properties.create(Material.IRON));
 		this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
+	}
+
+	@Override
+	public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+		if (worldIn.isRemote) {
+			ScreenManager.openIronChestScreen();
+			return ActionResultType.SUCCESS;
+		}
+		return ActionResultType.CONSUME;
 	}
 
 	public BlockState getStateForPlacement(BlockItemUseContext context) {
