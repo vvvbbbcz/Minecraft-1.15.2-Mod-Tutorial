@@ -3,6 +3,7 @@
 <p style="font-style: inherit;font: bolder;font-size: x-large;">
 欢迎阅读此教程！
 </p>
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 若发现教程有错误之处，欢迎读者斧正！  
 您可以[提交issue](https://github.com/vvvbbbcz/ModderTutor/issues)或向book分支提交PR，亦可给作者发送邮件：[vvvbbbcz@163.com](mailto:vvvbbbcz@163.com)
@@ -55,6 +56,5 @@
 国内：https://vvvbbbcz.gitee.io/modderguide/  
 国外：https://vvvbbbcz.github.io/ModderGuide/
 
-本教程还提供[源代码](https://github.com/vvvbbbcz/ModderGuide/tree/master)，使用源码请遵守[GPL-3.0](https://github.com/vvvbbbcz/ModderGuide/blob/master/LICENSE)协议的规定。  
-源码国内镜像：[链接](https://gitee.com/vvvbbbcz/ModderGuide/tree/master/)  
-**注：源代码维护者并非本文作者，可能与原文不匹配**
+本教程还提供[源代码](https://github.com/vvvbbbcz/ModderGuide/tree/master)，使用源码请遵守[反996许可证](https://github.com/vvvbbbcz/ModderGuide/blob/master/LICENSE)的规定。  
+源码国内镜像：[链接](https://gitee.com/vvvbbbcz/ModderGuide/tree/master/)
