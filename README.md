@@ -3,6 +3,9 @@
 <p style="font-style: inherit;font: bolder;font-size: x-large;">
 欢迎阅读此教程！
 </p>
+<p style="font-style: inherit;font: bolder;font-size: x-large;">
+2021年3月7日：本教程因中考暂停更新
+</p>
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 若发现教程有错误之处，欢迎读者斧正！  
